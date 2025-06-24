@@ -8,3 +8,6 @@ __pycache__/
 # macOS system files
 .DS_Store
 .env
+chroma.sqlite3
+travel2.sqlite3
+LangGraph Agent/8a6f1e63-e2d8-4132-adaa-ca8e6e69974a
