@@ -1,12 +1,20 @@
-import os 
-from dotenv import load_dotenv
+# pip install -qU "langchain[anthropic]" to call the model
 
-load_dotenv()
+from langgraph.prebuilt import create_react_agent
 
+def get_weather(city: str) -> str:
+    """Get weather for a given city."""
+    return f"It's always sunny in {city}!"
 
-def main():
-    print("the main function")
+agent = create_react_agent(
+    model="anthropic:claude-3-7-sonnet-latest",
+    tools=[get_weather],
+    prompt="You are a helpful assistant"
+)
 
+# Run the agent
+agent.invoke(
+    {"messages": [{"role": "user", "content": "what is the weather in sf"}]}
+)
 
-if __name__ == '__main__':
-    main()
+if __init__ = __main__:
