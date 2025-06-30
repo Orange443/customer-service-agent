@@ -1,0 +1,4 @@
+# Tells Git to ignore files like .env and the venv folder.
+.env
+venv/
+__init__.py
